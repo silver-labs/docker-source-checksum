@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build
-      run: cargo build --locked --release
+      run: cargo build --release
     - name: version
       run: echo "::set-output name=version::$(./target/release/docker-source-checksum --version)"
       id: version
